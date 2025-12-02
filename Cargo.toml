@@ -1,0 +1,9 @@
+[package]
+name = "time-test"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+plctag = "0.4.1"
+serde = "1.0.228"
+tokio = { version = "1.48.0", features = ["full"] }

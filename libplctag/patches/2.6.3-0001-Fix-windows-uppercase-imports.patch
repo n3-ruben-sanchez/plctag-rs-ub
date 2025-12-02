@@ -1,0 +1,147 @@
+diff --git a/src/examples/async_stress.c b/src/examples/async_stress.c
+index 68eaa91..ac17740 100644
+--- a/src/examples/async_stress.c
++++ b/src/examples/async_stress.c
+@@ -45,7 +45,7 @@
+ #include <stdlib.h>
+ #include <inttypes.h>
+ #if defined(WIN32) || defined(_WIN32)
+-    #include <Windows.h>
++    #include <windows.h>
+ #else
+     #include <signal.h>
+ #endif
+diff --git a/src/examples/multithread.c b/src/examples/multithread.c
+index 3f5a9bd..8b54cbd 100644
+--- a/src/examples/multithread.c
++++ b/src/examples/multithread.c
+@@ -35,7 +35,7 @@
+ #include <string.h>
+ #include <stdlib.h>
+ #if defined(WIN32) || defined(_WIN32)
+-#include <Windows.h>
++#include <windows.h>
+ #else
+ #include <pthread.h>
+ #include <signal.h>
+diff --git a/src/examples/test_connection_group.c b/src/examples/test_connection_group.c
+index 806461c..904c5a7 100644
+--- a/src/examples/test_connection_group.c
++++ b/src/examples/test_connection_group.c
+@@ -44,7 +44,7 @@
+ #include <stdlib.h>
+ #include <inttypes.h>
+ #if defined(WIN32) || defined(_WIN32)
+-#include <Windows.h>
++#include <windows.h>
+ #else
+ #include <pthread.h>
+ #include <stdint.h>
+diff --git a/src/examples/test_event_windows.c b/src/examples/test_event_windows.c
+index 97f349d..5e716dd 100644
+--- a/src/examples/test_event_windows.c
++++ b/src/examples/test_event_windows.c
+@@ -35,7 +35,7 @@
+ #include <string.h>
+ #include <stdlib.h>
+ #ifdef _WIN32
+-#include <Windows.h>
++#include <windows.h>
+ #else
+ #include <pthread.h>
+ #include <signal.h>
+diff --git a/src/examples/test_shutdown.c b/src/examples/test_shutdown.c
+index bceeea3..3e8d3bf 100644
+--- a/src/examples/test_shutdown.c
++++ b/src/examples/test_shutdown.c
+@@ -37,7 +37,7 @@
+ #include <stdlib.h>
+ #include <inttypes.h>
+ #if defined(WIN32) || defined(_WIN32)
+-#include <Windows.h>
++#include <windows.h>
+ #else
+ #include <pthread.h>
+ #include <stdint.h>
+diff --git a/src/examples/thread_stress.c b/src/examples/thread_stress.c
+index 7745e76..fb5195b 100644
+--- a/src/examples/thread_stress.c
++++ b/src/examples/thread_stress.c
+@@ -45,7 +45,7 @@
+ #include <stdlib.h>
+ #include <inttypes.h>
+ #if defined(WIN32) || defined(_WIN32)
+-#include <Windows.h>
++#include <windows.h>
+ #else
+ #include <pthread.h>
+ #include <stdint.h>
+diff --git a/src/platform/windows/platform.c b/src/platform/windows/platform.c
+index c157dff..2606d44 100644
+--- a/src/platform/windows/platform.c
++++ b/src/platform/windows/platform.c
+@@ -42,8 +42,8 @@
+ #include <tchar.h>
+ #include <strsafe.h>
+ #include <io.h>
+-#include <Winsock2.h>
+-#include <Ws2tcpip.h>
++#include <winsock2.h>
++#include <ws2tcpip.h>
+ #include <timeapi.h>
+ #include <string.h>
+ #include <stdlib.h>
+diff --git a/src/platform/windows/platform.h b/src/platform/windows/platform.h
+index d2bc197..43c3b6b 100644
+--- a/src/platform/windows/platform.h
++++ b/src/platform/windows/platform.h
+@@ -51,8 +51,8 @@ extern "C"
+ #include <tchar.h>
+ #include <strsafe.h>
+ #include <io.h>
+-#include <Winsock2.h>
+-#include <Ws2tcpip.h>
++#include <winsock2.h>
++#include <ws2tcpip.h>
+ #include <string.h>
+ #include <stdlib.h>
+ #include <winnt.h>
+@@ -62,8 +62,8 @@ extern "C"
+ #include <time.h>
+ #include <stdio.h>
+ 
+-/*#include <WinSock2.h>*/
+-/*#include <Ws2tcpip.h>*/
++/*#include <winSock2.h>*/
++/*#include <ws2tcpip.h>*/
+ /*#include <sys/types.h>*/
+ #include <stdint.h>
+ /*#include <io.h>*/
+diff --git a/src/tests/ab_server/src/main.c b/src/tests/ab_server/src/main.c
+index d29cf37..6db5283 100644
+--- a/src/tests/ab_server/src/main.c
++++ b/src/tests/ab_server/src/main.c
+@@ -41,7 +41,7 @@
+ #include <time.h>
+ 
+ #if defined(IS_WINDOWS)
+-#include <Windows.h>
++#include <windows.h>
+ #else
+  /* assume it is POSIX of some sort... */
+ #include <signal.h>
+diff --git a/src/tests/ab_server/src/utils.c b/src/tests/ab_server/src/utils.c
+index 8ae3abc..5c3744b 100644
+--- a/src/tests/ab_server/src/utils.c
++++ b/src/tests/ab_server/src/utils.c
+@@ -44,8 +44,8 @@
+     #include <tchar.h>
+     #include <strsafe.h>
+     #include <io.h>
+-    #include <Winsock2.h>
+-    #include <Ws2tcpip.h>
++    #include <winsock2.h>
++    #include <ws2tcpip.h>
+ #else
+     /* assume it is POSIX of some sort... */
+     #include <sys/time.h>
